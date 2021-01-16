@@ -5,5 +5,5 @@ set(CMAKE_C_STANDARD 11)
 set(OPENSSL_USE_STATIC_LIBS TRUE)
 find_package(OpenSSL REQUIRED)
 
-add_executable(CryptTool main.c crypto/file/fileAES.h crypto/file/fileAES.c)
+add_executable(CryptTool main.c crypto/file/fileAES.h crypto/file/fileAES.c crypto/file/file.c crypto/file/file.h)
 target_link_libraries(CryptTool OpenSSL::Crypto)
