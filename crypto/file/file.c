@@ -2,7 +2,7 @@
 // Created by goupilr on 16/01/2021.
 //
 
-#include "file.h"
+#include "header/file.h"
 
 FileInfo* loadFileFromPath(char* path)
 {
@@ -18,8 +18,8 @@ FileInfo* loadFileFromPath(char* path)
 
 
     //TODO: "cipher" an empty file : just cipher its name.
-    int nbBytesFile = 0;
-    if (nbBytesFile = countBytePFile(pFile) == -1)
+    int nbBytesFile = countBytePFile(pFile);
+    if (nbBytesFile == -1)
         return NULL;
 
     fileInfo->m_fileContent = (char*) calloc(nbBytesFile, sizeof(unsigned char));
