@@ -16,14 +16,10 @@
  */
 struct FileInfo_s
 {
-    /**
-     * The content of the file stored in an array of bytes.
-     */
-    unsigned char* m_fileContent;
-    /**
-     * The name of the file.
-     */
-    unsigned char* m_name;
+    unsigned char* m_fileContent;   /*!< The content of the file stored in an array of bytes. */
+    unsigned int m_fileSize;    /*!< The previous array's size. */
+    unsigned char* m_name;  /*!< The name of the file. */
+
 };
 
 typedef struct FileInfo_s FileInfo;
