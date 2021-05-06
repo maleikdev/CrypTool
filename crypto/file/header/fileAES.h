@@ -5,4 +5,22 @@
 #ifndef CRYPTTOOL_FILEAES_H
 #define CRYPTTOOL_FILEAES_H
 
+#include "file.h"
+
+/**
+ * Encrypt a plain FileInfo.
+ *
+ * @param file FileInfo to be encrypted.
+ * @param key AES secret key.
+ */
+void encryptFileInfoAES(FileInfo* file, char* key);
+
+/**
+ * Decrypt a plain FileInfo.
+ *
+ * @param file FileInfo to be decrypted.
+ * @param key AES secret key.
+ */
+void decryptFileInfoAES(FileInfo* file, char* key);
+
 #endif //CRYPTTOOL_FILEAES_H
