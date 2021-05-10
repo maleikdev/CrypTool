@@ -19,6 +19,7 @@ struct FileInfo_s
     unsigned char* m_fileContent;   /*!< The content of the file stored in an array of bytes. */
     unsigned int m_fileSize;    /*!< The previous array's size. */
     unsigned char* m_name;  /*!< The name of the file. */
+    unsigned char* m_iv;    /*!< The AES initialization vector, NULL when plaintext */
 
 };
 
