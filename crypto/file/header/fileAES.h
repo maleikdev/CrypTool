@@ -13,7 +13,7 @@
  * @param file FileInfo to be encrypted.
  * @param key AES secret key.
  */
-void encryptFileInfoAES(FileInfo* file, char* key);
+void encryptFileInfoAES256(FileInfo* file, char* key);
 
 /**
  * Decrypt a plain FileInfo.
@@ -21,6 +21,6 @@ void encryptFileInfoAES(FileInfo* file, char* key);
  * @param file FileInfo to be decrypted.
  * @param key AES secret key.
  */
-void decryptFileInfoAES(FileInfo* file, char* key);
+void decryptFileInfoAES256(FileInfo* file, char* key);
 
 #endif //CRYPTTOOL_FILEAES_H
