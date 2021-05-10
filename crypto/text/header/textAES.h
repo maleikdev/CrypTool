@@ -27,4 +27,9 @@ char* encryptTextAES256(unsigned char* text, unsigned int* size, unsigned char* 
  */
 void decryptTextAES256(unsigned char* text, unsigned int* size, unsigned char* key, unsigned char* iv);
 
+/**
+ * Method that contains SSL's behaviour when an error occurs in a function.
+ */
+void handleSSLErrors();
+
 #endif //CRYPTTOOL_TEXTAES_H
