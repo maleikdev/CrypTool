@@ -3,7 +3,7 @@
 //
 
 #include "header/textAES.h"
-#include "../error.c"
+#include "../error.h"
 
 char* encryptTextAES256(unsigned char* text, unsigned int* size,unsigned char* key)
 {
