@@ -3,6 +3,7 @@
 //
 
 #include "header/textAES.h"
+#include "../error.c"
 
 char* encryptTextAES256(unsigned char* text, unsigned int* size,unsigned char* key)
 {
@@ -73,8 +74,3 @@ void decryptTextAES256(unsigned char* text, unsigned int* size, unsigned char* k
 
 }
 
-void handleSSLErrors()
-{
-    ERR_print_errors((BIO *) stderr);
-    abort();
-}
