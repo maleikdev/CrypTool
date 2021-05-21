@@ -26,11 +26,14 @@ FileInfo* loadFileFromPath(char* path)
 
     unsigned char tempChar = 0;
     unsigned int countForTab = 0;
-    while (tempChar = fgetc(pFile) != EOF)
+    do
     {
+        tempChar = fgetc(pFile);
+        if (feof(pFile))
+            break;
         fileInfo->m_fileContent[countForTab] = tempChar;
         countForTab++;
-    }
+    } while (1);
 
     fclose(pFile);
     return fileInfo;
