@@ -27,6 +27,7 @@ unsigned char* textDigestSHA256(unsigned char* text, unsigned int size)
         handleSSLErrors();
 
     free(tempSize);
+    EVP_MD_CTX_free(ctx);
     return hash;
 }
 
@@ -52,5 +53,6 @@ unsigned char* textDigestMD5(unsigned char* text, unsigned int size)
         handleSSLErrors();
 
     free(tempSize);
+    EVP_MD_CTX_free(ctx);
     return hash;
 }
