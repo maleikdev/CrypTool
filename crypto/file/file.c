@@ -22,6 +22,7 @@ FileInfo* loadFileFromPath(char* path)
     if (nbBytesFile == -1)
         return NULL;
 
+    fileInfo->m_fileSize = nbBytesFile;
     fileInfo->m_fileContent = (char*) calloc(nbBytesFile, sizeof(unsigned char));
 
     unsigned char tempChar = 0;
