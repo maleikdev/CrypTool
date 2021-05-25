@@ -56,3 +56,43 @@ unsigned char* textDigestMD5(unsigned char* text, unsigned int size)
     EVP_MD_CTX_free(ctx);
     return hash;
 }
+
+unsigned char* convertHashToReadable(unsigned char* hash, unsigned int hashSize)
+{
+    char* readableHash = (char*) calloc(hashSize * 2, sizeof(char));
+
+    unsigned char firstQuartet = 0U;
+    unsigned char secondQuartet = 0U;
+
+    for (unsigned int i = 0 ; i < hashSize ; i++)
+    {
+        //quartets initialization
+        firstQuartet = hash[i] >> 4;
+        secondQuartet = hash[i] & 0x0f;
+
+        //1st quartet conversion
+        if (firstQuartet < 0x0a)
+        {
+            readableHash[2*i] = (char) ('0' + firstQuartet);
+        }
+        else
+        {
+            firstQuartet -= 0x0a;
+            readableHash[2*i] = (char) ('A' + firstQuartet);
+        }
+
+        //1st quartet conversion
+        if (secondQuartet < 0x0a)
+        {
+            readableHash[(2*i)+1] = (char) ('0' + secondQuartet);
+        }
+        else
+        {
+            secondQuartet -= 0x0a;
+            readableHash[(2*i)+1] = (char) ('A' + secondQuartet);
+        }
+
+    }
+
+    return readableHash;
+}

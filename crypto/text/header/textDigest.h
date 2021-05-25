@@ -25,4 +25,13 @@ unsigned char* textDigestSHA256(unsigned char* text, unsigned int textSize);
  */
 unsigned char* textDigestMD5(unsigned char* text, unsigned int textSize);
 
+/**
+ * Convert a binary hash sum to a human readable sum.
+ *
+ * @param hash Sum in a binary format.
+ * @param hashSize Size of the previous sum.
+ * @return The sum in a readable form.
+ */
+unsigned char* convertHashToReadable(unsigned char* hash, unsigned int hashSize);
+
 #endif //CRYPTTOOL_TEXTDIGEST_H
