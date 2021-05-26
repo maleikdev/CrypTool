@@ -32,6 +32,6 @@ unsigned char* textDigestMD5(unsigned char* text, unsigned int textSize);
  * @param hashSize Size of the previous sum.
  * @return The sum in a readable form.
  */
-unsigned char* convertHashToReadable(unsigned char* hash, unsigned int hashSize);
+unsigned char* convertHashToReadable(const unsigned char* hash, unsigned int hashSize);
 
 #endif //CRYPTTOOL_TEXTDIGEST_H

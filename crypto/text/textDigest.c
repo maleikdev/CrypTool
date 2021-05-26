@@ -57,7 +57,7 @@ unsigned char* textDigestMD5(unsigned char* text, unsigned int size)
     return hash;
 }
 
-unsigned char* convertHashToReadable(unsigned char* hash, unsigned int hashSize)
+unsigned char* convertHashToReadable(const unsigned char* hash, unsigned int hashSize)
 {
     char* readableHash = (char*) calloc(hashSize * 2, sizeof(char));
 
